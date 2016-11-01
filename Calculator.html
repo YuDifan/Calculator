@@ -1,0 +1,80 @@
+<html>
+<head>
+<title> Calculator </title>
+</head>
+<body bgcolor="00FFFF">
+<center><br>
+<h1><B><font color = "black" style = "Font-size:100"> Calculator </font></h1></B>
+<hr size=20 color="white">
+<div style="width:300px; background:"FFF8DC">
+<form name="Calculator">
+<input name="output" placeholder="0" style="width:250px; height:65px; margin:5px; font-size:50; border-radius:15px; text-align:right"/>
+<br>
+<input type="button" value="7" onClick="document.Calculator.output.value +='7'" style="width:60px; height:60px; margin:5px; font-size:30; border-radius:15px"/>
+<input type="button" value="8" onClick="document.Calculator.output.value +='8'" style="width:60px; height:60px; font-size:30; border-radius:15px"/>
+<input type="button" value="9" onClick="document.Calculator.output.value +='9'" style="width:60px; height:60px; font-size:30; border-radius:15px"/>
+<input type="button" value="+" onClick="plus()" style="width:60px; height:60px; font-size:30; border-radius:15px"/>
+<br>
+<input type="button" value="4" onClick="document.Calculator.output.value +='4'" style="width:60px; height:60px; margin:5px; font-size:30; border-radius:15px"/>
+<input type="button" value="5" onClick="document.Calculator.output.value +='5'" style="width:60px; height:60px; font-size:30; border-radius:15px"/>
+<input type="button" value="6" onClick="document.Calculator.output.value +='6'" style="width:60px; height:60px; font-size:30; border-radius:15px"/>
+<input type="button" value="-" onClick="sub()" style="width:60px; height:60px; font-size:30; border-radius:15px"/>
+<br>
+<input type="button" value="1" onClick="document.Calculator.output.value +='1'" style="width:60px; height:60px; margin:5px; font-size:30; border-radius:15px"/>
+<input type="button" value="2" onClick="document.Calculator.output.value +='2'" style="width:60px; height:60px; font-size:30; border-radius:15px"/>
+<input type="button" value="3" onClick="document.Calculator.output.value +='3'" style="width:60px; height:60px; font-size:30; border-radius:15px"/>
+<input type="button" value="*" onClick="multi()" style="width:60px; height:60px; font-size:30; border-radius:15px"/>
+<br>
+<input type="button" value="0" onClick="document.Calculator.output.value +='0'" style="width:60px; height:60px; margin:5px; font-size:30; border-radius:15px"/>
+<input type="button" value="%" onClick="pct()" style="width:60px; height:60px; font-size:30; border-radius:15px"/>
+<input type="button" value="." onClick="dot()" style="width:60px; height:60px; font-size:30; border-radius:15px"/>
+<input type="button" value="/" onClick="div()" style="width:60px; height:60px; font-size:30; border-radius:15px"/>
+<br>
+<input type="button" value="=" onClick="equal()" style="width:130px; height:60px; margin:5px; font-size:30; border-radius:15px"/>
+<input type="button" value="C" onClick="reset()" style="width:130px; height:60px; font-size:30; border-radius:15px"/>
+</form>
+</div>
+<script>
+function plus()
+{
+  document.Calculator.output.value +="+";
+  document.Calculator.output.style.textAlign="right";
+}
+function sub()
+{
+  document.Calculator.output.value +="-";
+  document.Calculator.output.style.textAlign="right";
+}
+function multi()
+{
+  document.Calculator.output.value +="*";
+  document.Calculator.output.style.textAlign="right";
+}
+function pct()
+{
+  document.Calculator.output.value +="%";
+  document.Calculator.output.style.textAlign="right";
+}
+function dot()
+{
+  document.Calculator.output.value +=".";
+  document.Calculator.output.style.textAlign="right";
+}
+function div()
+{
+  document.Calculator.output.value +="/";
+  document.Calculator.output.style.textAlign="right";
+}
+function reset()
+{
+  document.Calculator.output.value +="";
+  document.Calculator.output.style.textAlign="right";
+}
+function equal()
+{
+  document.Calculator.output.value=eval(document.Calculator.output.value);
+  document.Calculator.output.style.textAlign="right";
+}
+</script>
+</body>
+</html>
